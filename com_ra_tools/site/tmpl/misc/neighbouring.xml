@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 18/05/22 CB Created
+-->
+<metadata>
+    <layout title="Show Neighbouring Groups/Areas" option="View">
+		<message>
+			<![CDATA[Show Neighbouring Groups or Areas]]>  <!-- CDATA introduces "character data" that will not be parsed as XML -->
+		</message>
+    </layout>
+    <config>
+	<fields name="params">
+            <fieldset name="basic">
+                <field name="note1" type="note" label="This module creates a table of name/websites/walks, either for Neighbouring Groups or Areas"/>
+                <field name="display_type" type="radio" default="G" label="Type of display">
+                    <option value="G">Groups</option>
+                    <option value="A">Areas</option>
+                </field>                
+                <field 
+                    name="note2" 
+                    type="note" 
+                    showon="display_type:A"
+                    label="For Areas, specify them below"/>  
+                <field 
+                    name="area_list"
+                    showon="display_type:A"
+                    type="text"
+                    class="input-xxlarge" 
+                    label="List of Area codes" 
+                    hint="NS,CH,GR"
+                    description="Enter a series of two letter codes, separated by commas" />  
+                <field name="note3" 
+                    type="note" 
+                    showon="display_type:G"
+                    label="For Groups, this is taken from the list of Groups in the Component parameters"/>                          
+
+                <field name="page_intro" 
+                       type="text" 
+                       default="" 
+                       class="input-xxlarge" 
+                       label="Introduction (optional)" 
+                       description="Any introductory text for the page" />  
+                <field 
+                    name="show_area" 
+                    showon="display_type:G"
+                    type="radio" 
+                    default="1" 
+                    label="Include Area website">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="programme" type="radio" default="1" label="Include link to walking programme">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>                
+                <field name="note4" type="note" label="For information about this function please visit: 
+https://docs.stokeandnewwcastleramblers.org.uk and read the Webmasters Guide"/>
+            </fieldset>
+    	</fields>
+    </config>
+</metadata>

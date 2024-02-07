@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- this is used to allow the menu entry to be customised, and fields will appear on the "Basic" tab when editing the menu entry from the back end 
+    19/01/21 CB correct spelling of website
+-->
+<metadata>
+	<layout title="Display contents of a folder" option="View">
+		<message>
+			<![CDATA[Display list of files in a folder]]>  <!-- CDATA introduces "character data" that will not be parsed as XML -->
+		</message>
+	</layout>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+                            <!-- Define your basic params for the view here 
+                                 They will appear as an "Options" tab when creating a front-end menu entry -->
+                            <field name="page_intro" 
+                                   type="text" 
+                                   default=""
+                                   class="input-xxlarge" 
+                                   label="Introduction (optional)" 
+                                   description="Any introductory text for the page" 
+                            />                                                          
+                            <field name="parent_folder" 
+                                type="fixedfolderlist" 
+                                default="images/com_ra_tools" 
+                                label="Parent folder" 
+                                directory="" 
+                                description="Parent folder for storage of PDFs and GPXs" 
+                                readonly="true" 
+                                exclude="^[Aa]dministrator$|^[Cc]ache$|^[Cc]omponents$|^[Cc]li$|^[Ii]ncludes$|^[Ll]anguage$|^[Ll]ibraries$|^[Ll]ogs$|^[Mm]odules$|^[Pp]lugins$|^[Tt]emplates$|^[Xx]mlrpc$" 
+                            />
+                            <field name="note1" 
+                                   type="note" 
+                                   label="The specified sub folder can itself be a subfolder (e.g. docs/committee)"
+                            />                            
+                            <field name="sub_folder" 
+                                type="text" 
+                                default="" 
+                                label="Sub folder" 
+                                description="Subordinate folder within the above parent" 
+                            /> 
+                            <field name="sort" type="radio" default="ASC" label="Sort order">
+                                <option value="ASC">Ascending</option>                            
+                                <option value="DESC">Descending</option>      
+                            </field>                                                                                    
+                            <field name="show_folder" type="radio" default="Y" label="Display folder name">
+                                <option value="Y">Yes</option>                            
+                                <option value="N">No</option>      
+                            </field>  
+                            <field name="note3" type="note" label="For information about this component please visit: https://docs.stokeandnewcastleramblers.org.uk and read the Webmasters Guide"/>
+			</fieldset>
+		</fields>
+	</config>
+</metadata>

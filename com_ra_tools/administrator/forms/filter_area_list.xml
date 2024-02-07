@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="filter">
+        <field
+            name="search"
+            type="text"
+            label="Search term"
+            description="Search term"
+            hint="JSEARCH_FILTER"
+        />
+    </fields>
+
+    <fields name="list">
+            <field
+                    name="fullordering"
+                    type="list"
+                    label="JGLOBAL_SORT_BY"
+                    default="g.name ASC"
+                    onchange="this.form.submit();"
+                    >
+                    <option value="">JGLOBAL_SORT_BY</option>
+                    <option value="a.code ASC">Code ascending</option>
+                    <option value="a.code DESC">Code descending</option>
+                    <option value="n.name ASC">Nation ascending</option>
+                    <option value="n.name DESC">Nation descending</option>
+                    <option value="a.name ASC">Name ascending</option>
+                    <option value="a.name DESC">Name descending</option>
+                    <option value="a.website ASC">Website ascending</option>
+                    <option value="a.website DESC">Website descending</option>
+                    <option value="a.co_url ASC">CO link ascending</option>
+                    <option value="a.co_url DESC">CO link descending</option>
+            </field>
+
+
+            <field
+                    name="limit"
+                    type="limitbox"
+                    label="JGLOBAL_LIST_LIMIT"
+                    default="25"
+                    onchange="this.form.submit();"
+            />
+    </fields>
+</form>

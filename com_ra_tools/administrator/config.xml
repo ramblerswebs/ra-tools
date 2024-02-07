@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  
+  If fields are added to this file, they should also be added to the installation
+  manifest file, with default values
+  15/01/21 CB added group_list 
+  06/03/23 CB Delete fields for Events and Guided Walks
+  17/07/23 CB delete Group lat/long (can be taken from ra_groups
+  24/07/23 CB correct name of fieldset
+-->
+<config>   
+    <fieldset
+	    name="com_ra_tools"
+        label="RA Tools">
+        <field
+            name="default_group"
+            type="text"
+            label="Default Group code"
+            description="Please enter the appropriate 4 character code"
+            default="NS03"
+        />
+	    <field
+            name="group_list"
+            type="text"
+            label="Local Groups"
+            description="Please enter series of 4 character codes, separated by commas"
+            default="NS01,NS02,NS03,NS04,NS05,NS06,NS07,NS08,NS09,NS10,NS11,NS12,NS50,NS51"
+            class="input-xxlarge"
+        />
+    </fieldset>
+    <fieldset name="walks" label="Walks">
+        <field 
+            name="note1" 
+            type="note" 
+            label="These parameters will be used for walking programmes not invoked from a menu e.g. from Groups in an Area, Neighbouring groups etc"
+        />
+        <field 
+            name="intro" 
+            type="text" 
+            label="Introduction (optional)" 
+            default="" 
+            class="input-xxlarge"         
+            description="Any introductory text for the page" 
+        />                              
+
+        <field 
+            name="show_cancelled" 
+            type="radio" 
+            label="Include cancelled walks"
+            default="0">              
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+        </field>  
+        <field name="restrict_walks" 
+               type="radio" 
+               default="0" 
+               label="Restrict list of walks">                               
+            <option value="0">Show all walks</option>
+            <option value="1">Restrict by number</option>
+            <option value="2">Restrict by weeks</option>
+        </field>  
+        <field name="limit" 
+               type="text" 
+               default="50" 
+               size="4" 
+               label="Max number to display (0=no limit)" 
+               description="Maximum number of walks to include in the display" 
+               showon="restrict_walks:1"
+        />
+        <field name="lookahead_weeks" 
+               type="text" 
+               default="12" 
+               size="3" 
+               label="Max weeks to display (0=no limit)" 
+               description="Maximum number of weeks to look ahead" 
+               showon="restrict_walks:2"
+        />  
+        <field name="display_type" type="radio" default="simple" label="Type of display">
+            <option value="simple">Simple list</option>                            
+            <option value="map">Map of walks</option>
+            <option value="calendar">Calendar of walks</option>
+            <option value="list">List of walks</option>
+            <option value="tabs">Full list (with tabs)</option> 
+        </field>                    
+<!--
+                            <field name="display_type" type="radio" default="simple" label="Type of display">
+                                <option value="simple">Simple list</option>                            
+                                <option value="map">Map only</option>
+                                <option value="tabs">Full list (with tabs)</option> 
+                            </field>  
+   
+-->                                        
+    </fieldset>
+    <fieldset name="Folders"
+	    label="Folders"
+	    description="Define storage locations"
+    >
+	    <field
+            name="routes"
+            type="text"
+            filter="text"
+            label="Folder for storing GPX files"
+            description="Files for Library of Routes"
+            default="/images/gpx"
+	    />
+        <field
+            name="document_library"
+            type="text"
+            filter="text"
+            label="Folder for document library"
+            description="Miscellaneous documents"
+            default="/images/docs"
+	    />
+    </fieldset>
+    <fieldset
+        name="permissions"
+        label="JCONFIG_PERMISSIONS_LABEL"
+        description="JCONFIG_PERMISSIONS_DESC" >
+        <field
+            name="rules"
+            type="rules"
+            label="JCONFIG_PERMISSIONS_LABEL"
+            validate="rules"
+            filter="rules"
+            component="com_ra_tools"
+            section="component"
+        />
+    </fieldset>
+</config>
+
+

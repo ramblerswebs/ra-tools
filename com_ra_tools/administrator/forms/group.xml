@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+14/03/23 Added namespace for Rules 
+          Individual rules can be added for fields (eg validate = Url will apply rule UrlRule
+-->
+<form>
+    <fieldset addruleprefix="Ramblers\Component\Ra_tools\Administrator\Rule">
+	<field
+            name="id"
+            type="hidden"
+	/>
+        <field
+            name="code"
+            type="text"
+            readonly="false"
+            label="Code"
+            description="Group code"
+            size="4"
+            default=""
+        />
+        <field
+            name="name"
+            type="text"
+            label="Name"
+            description="Group name"
+            size="60"
+            default=""
+        />
+        <field
+            name="details"
+            type="editor"
+            label="Details"
+            description="Details as shown on ramblers.org.uk"
+            size="40"
+            default=""
+        /> 
+        <field
+            name="co_url"
+            type="url"
+            label="CO website"
+            description="URL of Group website on ramblers.org.uk"
+            hint="https://ramblers.org.uk"
+            class="input-xxlarge"
+            size="40"
+            default=""
+        />           
+        <field
+            name="website"
+            type="url"
+            label="Website"
+            description="URL of Group website"
+            hint="https://"
+            class="input-xxlarge"
+            default=""
+        />
+    </fieldset>
+</form>
+

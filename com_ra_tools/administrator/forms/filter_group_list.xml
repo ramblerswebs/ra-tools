@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="filter">
+        <field
+            name="search"
+            type="text"
+            label="COM_RA_TOOLS_SEARCH_FILTER_SUBMIT"
+            description="Search term"
+            hint="JSEARCH_FILTER"
+        />
+    </fields>
+
+    <fields name="list">
+            <field
+                    name="fullordering"
+                    type="list"
+                    label="JGLOBAL_SORT_BY"
+                    default="a.name ASC"
+                    onchange="this.form.submit();"
+                    >
+                    <option value="">JGLOBAL_SORT_BY</option>
+                    <option value="g.code ASC">Code ascending</option>
+                    <option value="g.code DESC">Code descending</option>
+                    <option value="a.name ASC">Area ascending</option>
+                    <option value="a.name DESC">Area descending</option>
+                    <option value="g.name ASC">Name ascending</option>
+                    <option value="g.name DESC">Name descending</option>
+                    <option value="g.website ASC">Website ascending</option>
+                    <option value="g.website DESC">Website descending</option>
+            </field>
+
+
+            <field
+                    name="limit"
+                    type="limitbox"
+                    label="JGLOBAL_LIST_LIMIT"
+                    default="25"
+                    onchange="this.form.submit();"
+            />
+    </fields>
+</form>

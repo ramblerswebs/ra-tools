@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<extension type="component" method="upgrade">
+    <name>com_ra_tools</name>
+    <creationDate>23 May 2023</creationDate>
+    <author>Charlie Bigley</author>
+    <authorEmail>webmaster@bigley.me.uk</authorEmail>
+    <authorUrl>https://docs.stokeandnewcastleramblers.org.uk</authorUrl>
+    <copyright>[COPYRIGHT]</copyright>
+    <license>GNU General Public License version 2 or later;</license>
+    <version>4.0.3</version>
+    <description>Ramblers Tools</description>
+    <namespace path="src">Ramblers\Component\Ra_tools</namespace>
+    <scriptfile>script.php</scriptfile>
+    <!-- Front-end files -->
+    <files folder="site">
+        <folder>forms</folder>
+        <folder>src</folder>
+        <folder>tmpl</folder>
+    </files>
+    <administration>
+        <menu view="dashboard">RA Tools</menu>
+        <submenu>
+            <menu link="option=com_ra_tools&amp;view=dashboard">Dashboard</menu>
+            <menu link="option=com_ra_tools&amp;view=area_list">RA Areas</menu>
+            <menu link="option=com_ra_tools&amp;view=group_list">RA Groups</menu>
+            <menu link="option=com_ra_tools&amp;view=reports">Reports</menu>
+            <menu link="option=com_config&amp;view=component&amp;component=com_ra_tools">Configuration</menu>
+        </submenu>
+        <files folder="administrator">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>ra_tools.xml</filename>
+            <folder>forms</folder>
+            <folder>services</folder>
+            <folder>sql</folder>
+            <folder>src</folder>
+            <folder>tmpl</folder>
+        </files>
+    </administration>
+    <!-- Runs on install -->
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <!-- Runs on uninstall -->
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+    <!-- Runs on update -->
+	<update>
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql/</schemapath>
+		</schemas>
+	</update>            
+            <dlid prefix="dlid=" suffix="" />
+    </extension>
+

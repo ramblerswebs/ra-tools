@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- this is used to allow the menu entry to be customised, and fields will appear on the "Basic" tab when editing the menu entry from the back end 
+    19/01/21 CB correct spelling of website
+-->
+<metadata>
+	<layout title="Committee members" option="View">
+		<message>
+			<![CDATA[Committee members]]>  <!-- CDATA introduces "character data" that will not be parsed as XML -->
+		</message>
+	</layout>
+	<config>
+		<fields name="params">
+                    <fieldset name="basic">
+                        <field name="note1" type="note" label="This show details of Contacts"/>
+                        <field name="sort" type="radio" default="name" label="Order by">
+                            <option value="name">Name</option>
+                            <option value="role">Role</option>
+                            <option value="ordering">Manual ordering</option>
+                         </field>
+                        <field
+			    name="page_intro"
+                            type="editor"
+            		    label="Page Introduction"
+                            description="Text to be shown before table of members"
+                            filter="raw"
+                            rows="8"
+                            cols="80"
+			    default=""
+                        />  
+                            <field name="show_phone" type="radio" default="0" label="Display phone numbers">
+                                <option value="1">Yes</option>
+                                <option value="0">No</option>
+                            </field>
+                            <field name="show_images" type="radio" default="0" label="Display photos">
+                                <!-- option value="1">Yes</option -->
+                                <option value="0">No</option>
+                            </field>                                                      
+                            <field name="note2" type="note" label="For information about this component please visit: https://docs.stokeandnewcastleramblers.org.uk and read the Webmasters Guide"/>
+			</fieldset>
+		</fields>
+	</config>
+</metadata>

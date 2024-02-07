@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" client="site" method="upgrade">
+    <name>RA Tools Sidebar</name>
+    <author>Charlie Bigley - Staffordshire Ramblers</author>
+    <creationDate>22 Jul 2023</creationDate>
+    <copyright>Copyleft 2022 Charlie Bigley</copyright>
+    <license>This extension in released under the GNU/GPL License</license>
+    <authorEmail>webmaster@bigley.me.uk</authorEmail>
+    <authorUrl>staffordshireramblers.org.uk</authorUrl>
+    <version>4.0.1</version>
+    <description>This module enables the display of walks in a sidebar module</description>
+    <namespace>Joomla\Module\Ra_tools</namespace>
+    <help url="docs.stokeandnewcastleramblers.org.uk" />
+    <files>
+        <filename module="mod_ra_tools">mod_ra_tools.php</filename>
+        <filename>index.html</filename>
+        <folder>tmpl</folder>
+    </files>
+    <config>
+       <fields name="params">
+            <fieldset name="basic">
+                <field name="note1" 
+                    type="note" 
+                    label="For information about this module please visit: https://docs.stokeandnewwcastleramblers.org.uk and read the Guide to Ramblers Tools"
+                />
+                <field name="note2" type="note" label="In the Component parameters for Ramblers Tools, two types of Group details are specified: choose which one to use"/>
+                <field name="group_type" type="radio" default="single" label="Group type">
+                    <option value="single">Use single Group</option>
+                    <option value="list">Use the list of Groups</option>
+                </field>                       
+                <field name="display_type" type="radio" default="RJsonwalksStdNextwalks" label="Type of display">
+                    <option value="RJsonwalksStdNextwalks">Next walks</option>
+                    <option value="REventCalendar">Calendar of walks</option> 
+                </field>    
+                <field name="cancelled" 
+                    type="radio" 
+                    default="0" 
+                    label="Show cancelled walks">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="max" 
+                    type="text" 
+                    default="12" 
+                    size="4" 
+                    label="Max number (Next walks only)" 
+                    description="Max number of walks to be shown" 
+                />      
+            </fieldset>
+            <fieldset name="advanced">
+                <field name="layout"
+                    type="modulelayout"
+                    label="JFIELD_ALT_LAYOUT_LABEL"
+                    description="JFIELD_ALT_MODULE_LAYOUT_DESC"
+                />
+                <field name="moduleclass_sfx"
+                    type="text"
+                    label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                    description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"
+                />
+            </fieldset>
+        </fields>
+    </config>
+</extension>

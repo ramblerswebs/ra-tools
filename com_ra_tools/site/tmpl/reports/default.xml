@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 19/05/22 CB Created
+-->
+<metadata>
+    <layout title="Show Reports" option="View">
+		<message>
+			<![CDATA[Show Reports]]>  <!-- CDATA introduces "character data" that will not be parsed as XML -->
+		</message>
+    </layout>
+    <config>
+	<fields name="params">
+            <fieldset name="basic">
+                <!-- field name="report_type" type="radio" default="1" label="Type of Reports">
+                                <option value="1">1. Reports for Area</option>
+                                <option value="2">2. Reports for Group</option>
+                                <option value="3">3. General reports</option>
+                </field>    
+                <field
+                    name="code"
+                    type="text"
+                    label="Area/Group code"
+                    description="Please enter the appropriate 2 character Area code, or 4 character Group code"
+                    default="NS03"
+                / --> 
+    	
+            </fieldset>
+        </fields>
+    </config>
+</metadata>

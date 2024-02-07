@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+02/09/23 Created from manifest-413a
+04/09/23 Added info.png
+10/09/23 New view programme/radius
+04/01/24 Include framework.inc.php (used by batch programs for other components)
+24/01/24 Version 4.1.0: use translation strings from admin/com_ra_tools.sys.ini
+         Add site language file   
+         change method to install   
+05/02/24 change metod back to upgrade            
+-->
+<extension type="component" method="upgrade">
+    <element>com_ra_tools</element>
+    <name>COM_RA_TOOLS</name>
+    <description>COM_RA_TOOLS_XML_DESCRIPTION</description>
+    <creationDate>5 Feb 2024</creationDate>
+    <author>Charlie Bigley</author>
+    <authorEmail>webmaster@bigley.me.uk</authorEmail>
+    <authorUrl>https://docs.stokeandnewcastleramblers.org.uk</authorUrl>
+    <copyright>[COPYRIGHT]</copyright>
+    <license>GNU General Public License version 2 or later;</license>
+    <version>4.1.13</version>   
+    <namespace path="src">Ramblers\Component\Ra_tools</namespace>
+    <scriptfile>script.php</scriptfile>
+    <!-- Front-end files -->
+    <files folder="site">
+        <folder>forms</folder>
+        <folder>language</folder>
+        <folder>src</folder>
+        <folder>tmpl</folder>
+        <filename>walksprinted.php</filename>
+        <filename>framework.inc.php</filename>
+    </files>
+    <media folder="media" destination="com_ra_tools">
+        <folder>css</folder>
+        <folder>js</folder>
+        <!-- filename>bullseye.png</filename -->
+        <filename>cross.png</filename>
+        <filename>download.png</filename>
+        <filename>email.png</filename>
+        <filename>email2.png</filename>        
+        <filename>google.png</filename>
+        <filename>gps.png</filename>
+        <filename>icon-cog.png</filename>  
+        <filename>info.png</filename>        
+        <filename>joomla.asset.json</filename>
+        <filename>link.png</filename>
+        <filename>logo_90px.png</filename>
+        <filename>map_pin.png</filename>
+        <filename>paperclip.png</filename>        
+        <filename>print.png</filename>
+        <filename>tick.png</filename>
+        <filename>upload.png</filename>
+        <filename>walksfinder.png</filename>        
+    </media>    
+    <administration>
+        <menu view="dashboard">RA Tools</menu>
+        <submenu>
+            <menu link="option=com_ra_tools&amp;view=dashboard">Dashboard</menu>
+            <menu link="option=com_ra_tools&amp;view=area_list">RA Areas</menu>
+            <menu link="option=com_ra_tools&amp;view=group_list">RA Groups</menu>
+            <menu link="option=com_ra_tools&amp;view=reports">System Reports</menu>
+        </submenu>
+        <files folder="administrator">
+            <folder>forms</folder>
+            <folder>languages</folder>
+            <folder>services</folder>
+            <folder>sql</folder>
+            <folder>src</folder>
+            <folder>tmpl</folder>
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>            
+        </files>
+    </administration>
+    <!-- Runs on install -->
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <!-- Runs on uninstall -->
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+    <!-- Runs on update -->
+    <update>
+        <schemas>
+            <schemapath type="mysql">sql/updates/mysql/</schemapath>
+        </schemas>
+    </update>    
+    <dlid prefix="dlid=" suffix="" />
+</extension>

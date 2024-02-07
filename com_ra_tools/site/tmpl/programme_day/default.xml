@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- this is used to allow the menu entry to be customised, and fields will appear on the "Basic" tab when editing the menu entry from the back end 
+    19/01/21 CB correct spelling of website
+-->
+<metadata>
+	<layout title="Walking programme for single day" option="View">
+		<message>
+			<![CDATA[Walks for single day]]>  <!-- CDATA introduces "character data" that will not be parsed as XML -->
+		</message>
+	</layout>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+                            <!-- Define your basic params for the view here 
+                                 They will appear as an "Options" tab when creating a front-end menu entry -->
+                            <field name="note1" type="note" label="In the Component parameters for Ramblers Tools, two types of Group details are specified: choose which one to use"/>
+                            <field name="group_type" type="radio" default="single" label="Group type">
+                                <option value="single">Use single Group</option>
+                                <option value="list">Use the list of Groups</option>
+                             </field>
+                            <field name="intro" type="text" default="" class="input-xxlarge" label="Introduction (optional)" description="Any introductory text for the page" />    
+                            <field name="display_type" type="radio" default="simple" label="Type of display">
+                                <option value="simple">Simple list</option>                            
+                                <option value="map">Map of walks</option>
+                                <option value="list">List of walks</option>
+                                <option value="tabs">Full list (with tabs)</option> 
+                            </field>                                                  
+                            <field name="day" type="radio" default="Sunday" label="Day of the week">
+                                <option value="Monday">Monday</option>
+                                <option value="Tuesday">Tuesday</option>
+                                <option value="Wednesday">Wednesday</option>
+                                <option value="Thursday">Thursday</option>
+                                <option value="Friday">Friday</option>
+                                <option value="Saturday">Saturday</option>
+                                <option value="Sunday">Sunday</option>
+                            </field> 
+                            <field name="show_cancelled" type="radio" default="0" label="Include cancelled walks">
+                                <option value="1">Yes</option>
+                                <option value="0">No</option>
+                            </field>                                 
+                            <field name="restrict_walks"
+                                   type="radio"
+                                   default="1"
+                                   label="Restrict list of walks">
+                                <option value="0">Show all walks</option>
+                                <option value="1">Restrict by number</option>
+                                <option value="2">Restrict by weeks</option>
+                            </field>
+                            <field name="limit"
+                                   type="text"
+                                   default="50"
+                                   size="4"
+                                   label="Max number to display (0=no limit)"
+                                   description="Maximum number of walks to include in the display"
+                                   showon="restrict_walks:1"
+                            />
+                            <field name="lookahead_weeks"
+                                   type="text"
+                                   default="12"
+                                   size="3"
+                                   label="Max weeks to display (0=no limit)"
+                                   description="Maximum number of weeks to look ahead"
+                                   showon="restrict_walks:2"
+                            />                             
+                            <field name="note2" type="note" label="For information about this component please visit: https://docs.stokeandnewcastleramblers.org.uk and read the Webmasters Guide"/>
+<!--
+                            <field name="days" type="text" default="0" label="Look ahead days" description="Number of days">                            
+                            <field name="icons" type="radio" default="1" label="Show grade icons">
+                                <option value="1">Yes</option>
+                                <option value="0">No</option>
+                            </field--> 
+
+			</fieldset>
+		</fields>
+	</config>
+</metadata>
+
+

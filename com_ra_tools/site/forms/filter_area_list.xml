@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="filter">
+        <field
+            name="search"
+            type="text"
+            label="COM_RA_TOOLS_SEARCH_FILTER_SUBMIT"
+            description="Search term"
+            hint="JSEARCH_FILTER"
+        />
+        <!-- field
+                name="published"
+                type="status"
+                label="JOPTION_SELECT_PUBLISHED"
+                onchange="this.form.submit();"
+                >
+                <option value="">JOPTION_SELECT_PUBLISHED</option>
+        </field -->
+    </fields>
+
+	<fields name="list">
+
+		<field
+			name="fullordering"
+			type="list"
+			label="JGLOBAL_SORT_BY"
+			default="a.name ASC"
+			onchange="this.form.submit();"
+			>
+			<option value="">JGLOBAL_SORT_BY</option>
+			<option value="a.code ASC">Code Ascending</option>
+			<option value="a.code DESC">Code Descending</option>
+			<option value="a.name ASC">Name Ascending</option>
+			<option value="a.name DESC">Name Descending</option>
+			<option value="n.name ASC">Nation ascending</option>
+			<option value="n.name DESC">Nation descending</option>
+			<option value="a.cluster ASC">Cluster ascending</option>
+			<option value="a.cluster DESC">Cluster descending</option>
+                        <option value="a.website ASC">Website Ascending</option>
+			<option value="a.website DESC">Website Descending</option>
+		</field>
+
+		<field
+			name="limit"
+			type="limitbox"
+			label="JGLOBAL_LIST_LIMIT"
+			default="25"
+			onchange="this.form.submit();"
+		/>
+	</fields>
+</form>

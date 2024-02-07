@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field
+			name="id"
+			type="hidden"
+		/>
+		<field
+			name="nation_id"
+			type="foreignkey"
+			label="Nation"
+			description="Name of the Nation"
+                        table="#__ra_nations"
+                        key="id"
+                        value="name"
+                        default="" 
+                        required="true"
+			/>
+		<field
+			name="code"
+			type="text"
+            readonly="false"
+			label="Code"
+			description="Area code"
+			size="4"
+			default=""
+		/>
+		<field
+			name="name"
+			type="text"
+			label="Name"
+			description="Area name"
+			size="60"
+			default=""
+		/>
+ 		<field
+			name="details"
+			type="editor"
+			label="Details"
+			description="Details as shown on ramblers.org.uk"
+			size="40"
+			default=""
+		/> 
+        <field
+			name="co_url"
+			type="text"
+			label="CO website"
+			description="URL of Area website on ramblers.org.uk"
+            hint="https://ramblers.org.uk"
+            class="input-xxlarge"
+			size="40"
+			default=""
+		/>           
+		<field
+			name="website"
+			type="text"
+			label="Website"
+			description="URL of Area website"
+            hint="https://"
+			class="input-xxlarge"
+			default=""
+		/>
+        </fieldset>
+</form>
+

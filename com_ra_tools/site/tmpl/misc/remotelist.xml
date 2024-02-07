@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- this is used to allow the menu entry to be customised, and fields will appear on the "Basic" tab when editing the menu entry from the back end 
+    19/01/21 CB correct spelling of website
+-->
+<metadata>
+	<layout title="List remote contents as a list" option="View">
+		<message>
+			<![CDATA[Display list of articles from a remote website]]>  <!-- CDATA introduces "character data" that will not be parsed as XML -->
+		</message>
+	</layout>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+                            <!-- Define your basic params for the view here 
+                                 They will appear as an "Options" tab when creating a front-end menu entry -->
+                            <field name="page_intro" 
+                                   type="text" 
+                                   default=""
+                                   class="input-xxlarge" 
+                                   label="Introduction (optional)" 
+                                   description="Any introductory text for the page" 
+                            />                                                          
+                            <field name="website" 
+                                type="text" 
+                                default="https://staffordshireramblers.org.uk" 
+                                label="Website" 
+                                description="Full URL of the remote website" 
+                            />
+                            <field name="token" 
+                                type="text" 
+                                default="" 
+                                label="Token" 
+                                description="Security API token to access the website" 
+                            /> 
+                            <field name="note1" 
+                                   type="note" 
+                                   label="This token must be generated for you on the remote site"
+                            />                            
+                            <field name="category_id" 
+                                type="text" 
+                                default="" 
+                                label="Category ID" 
+                                description="ID of the category of articles to be displayed" 
+                            />                                                                                   
+                            <field name="show_details" type="radio" default="Y" label="Display details of the origin">
+                                <option value="Y">Yes</option>                            
+                                <option value="N">No</option>      
+                            </field>  
+                            <field name="note3" type="note" label="For information about this component please visit: https://docs.stokeandnewcastleramblers.org.uk and read the Webmasters Guide"/>
+			</fieldset>
+		</fields>
+	</config>
+</metadata>
+

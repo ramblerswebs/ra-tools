@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- this is used to allow the menu entry to be customised, and fields will appear on the "Basic" tab when editing the menu entry from the back end 
+    19/01/21 CB correct spelling of website
+-->
+<metadata>
+	<layout title="GPX utilities" option="View">
+		<message>
+			<![CDATA[Display or create GPX Routes]]>  <!-- CDATA introduces "character data" that will not be parsed as XML -->
+		</message>
+	</layout>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+                            <!-- Define your basic params for the view here 
+                                 They will appear as an "Options" tab when creating a front-end menu entry -->
+                            <field name="display_type" type="radio" default="RLeafletMapdraw" label="Type of display">
+                                <option value="P">Plot a Route</option>                            
+                                <option value="L">Display a library of Routes</option>
+                                <option value="S">Display a single Route</option>
+                            </field>  
+                            <field name="page_intro" 
+                                   type="text" 
+                                   default=""
+                                   class="input-xxlarge" 
+                                   label="Introduction (optional)" 
+                                   description="Any introductory text for the page" 
+                            />     
+                            <field name="download" type="radio" default="None" label="Allow download of GPX">
+                                <option value="Public">Always</option>                            
+                                <option value="Users">Only when logged in</option>      
+                                <option value="None">Never</option>
+                            </field>                                                         
+                            <field name="note1" 
+                                   type="note" 
+                                   showon="display_type:L"
+                                   label="If displaying Routes, page specific parameters for displaying a collection of them"
+                            />
+                            <field name="parent_folder" 
+                                type="fixedfolderlist" 
+                                default="images/com_ra_tools" 
+                                label="Parent folder" 
+                                directory="" 
+                                description="Parent folder for storage of PDFs and GPXs" 
+                                showon="display_type:L"
+                                hide_none="true" 
+                                hide_default="true" 
+                                exclude="^[Aa]dministrator$|^[Cc]ache$|^[Cc]omponents$|^[Cc]li$|^[Ii]ncludes$|^[Ll]anguage$|^[Ll]ibraries$|^[Ll]ogs$|^[Mm]odules$|^[Pp]lugins$|^[Tt]emplates$|^[Xx]mlrpc$" 
+                            />
+                            <field name="sub_folder" 
+                                type="text" 
+                                default="" 
+                                label="Sub folder" 
+                                showon="display_type:L"
+                                description="Subordinate folder within the above parent" 
+                            /> 
+                            <field name="note2" 
+                                   type="note" 
+                                   showon="display_type:S"
+                                   label="If displaying a single Route, specify the path and its name"
+                            />                                 
+                            <field
+                                name="gpx"
+                                type="text"
+                                label="Specify a file"
+                                description="Relevant GPX file"
+                                showon="display_type:S"
+                                hint="/images/com_ra_tools/gpx/route.gpx"
+                                default=""
+                            />                                                       
+                            <field name="note3" type="note" label="For information about this component please visit: https://docs.stokeandnewcastleramblers.org.uk and read the Webmasters Guide"/>
+			</fieldset>
+		</fields>
+	</config>
+</metadata>

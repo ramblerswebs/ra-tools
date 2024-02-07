@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Areas" option="View">
+		<message>
+			<![CDATA[List Ramblers Areas]]>
+		</message>
+	</layout>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+                            <!-- Define your basic params for the view here 
+                                 They will appear as an "Options" tab when creating a front-end menu entry -->
+                            <field name="note01" type="note" label="Shows Area codes, and allows drill-down to Group details" />                               
+			</fieldset>
+		</fields>
+	</config>
+</metadata>
+

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- this is used to allow the menu entry to be customised, and fields will appear on the "Basic" tab when editing the menu entry from the back end 
+    19/01/21 CB correct spelling of website
+-->
+<metadata>
+	<layout title="Walking programme for a single Group or a whole Area" option="View">
+		<message>
+			<![CDATA[<Walking programme for whole Area]]>  <!-- CDATA introduces "character data" that will not be parsed as XML -->
+		</message>
+	</layout>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+                            <!-- Define your basic params for the view here 
+                                 They will appear as an "Options" tab when creating a front-end menu entry -->
+                            <field name="note1" type="note" label="This option is deprecated - please use 'Walking Programme'"/>
+                            <field name="area" type="text" default="IL" size="4" label="Group code (4 chars) or Area code(2)" description="Four or two character code for the Area" />
+                            <field name="intro" type="text" default="" size="4" label="Introduction (optional)" description="Any introductory text for the page" /> 
+                            <field name="display_type" type="radio" default="simple" label="Type of display">
+                                <option value="simple">Simple list</option>                            
+                                <option value="map">Map of walks</option>
+                                <option value="calendar">Calendar of walks</option>
+                                <option value="cancelled">Cancelled walks</option>
+                                <option value="RJsonwalksStdWalkcsv">Extract walks as CSV file</option>
+                                <option value="printed">Extract text for a printed programme</option>
+                                <option value="RJsonwalksStdLeaderstable">Leaders of future walks</option>  
+                                <option value="tabs">Full list (with tabs)</option> 
+                            </field>                             
+                            <field name="limit" type="text" default="0" size="4" label="Max number to display (0=no limit)" description="Maximum number of walks to include in the display" />
+                            <field name="cancelled" type="radio" default="0" label="Include cancelled walks">
+                                <option value="1">Yes</option>
+                                <option value="0">No</option>
+                            </field> 
+                            <field name="note2" type="note" label="For information about this component please visit: https://docs.stokeandnewcastleramblers.org.uk and read the Webmasters Guide"/>
+<!--                         
+                            <field name="icons" type="radio" default="1" label="Show grade icons">
+                                <option value="1">Yes</option>
+                                <option value="0">No</option>
+                            </field--> 
+
+			</fieldset>
+		</fields>
+	</config>
+</metadata>

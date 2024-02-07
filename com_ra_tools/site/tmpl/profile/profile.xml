@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- this is used to allow the menu entry to be customised, and fields will appear on the "Basic" tab when editing the menu entry from the back end 
+    07/05/22 CB Created
+    17/03/23 CB copied from Joomla 3
+-->
+<metadata>
+	<layout title="My profile" option="View">
+		<message>
+			<![CDATA[Update my user profile]]>  <!-- CDATA introduces "character data" that will not be parsed as XML -->
+		</message>
+	</layout>
+	<config>
+	</config>
+</metadata>

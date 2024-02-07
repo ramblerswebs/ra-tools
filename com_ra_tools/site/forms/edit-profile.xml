@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+       <field name="id" type="text" default="0" label="User id"
+            readonly="true" class="hidden"
+            description="JGLOBAL_FIELD_ID_DESC" /> 
+		<field
+			name="ra_home_group"
+			type="textfield"
+			label="Home group"
+			description="COM_RAMBLERS_PROFILE_CB_GROUP_LIST_DESC"
+                        required="true"
+			default=""
+			/>          
+		<field
+			name="ra_group_code"
+			type="textfield"
+			label="Group(s)"
+			description="Group or Groups whose walks you are following (if more than one, they must be separated with commas)"
+                        required="true"
+			default=""
+			/>              
+                <field
+			name="preferred_name"
+			type="textfield"
+			label="Display name"
+			description="As visible to others (and as used in GWEM, if you are a leader)"
+			required="true"
+			default=""
+			/>
+
+		<field
+			name="ra_contactviaemail"
+			type="checkbox"
+			label="Contact via email"
+			description="Do you want messages from this website by email"
+			default="1"
+			/>		
+		<field
+			name="ra_mobile"
+			type="textfield"
+			label="Mobile"
+			description="As held in this website"
+			default=""
+			/>
+		<field
+			name="ra_contactviatextmessage"
+			type="checkbox"
+			label="Contact via text"
+			description="Do you want messages from this website by text (if this feature is implemented)"
+			default="1"
+			/>	
+                
+                 <field
+			name="ra_acknowledge_follow"
+			type="checkbox"
+			label="Acknowledge Follow"
+			description="Whether or not acknowlegement will be sent when choosing a walk to Follow"
+			default="1"
+			/>
+                 <field
+			name="ra_privacy_level"
+			type="textfield"
+			label="Privacy leve"
+			description="3. You will receive automated messages from the system and possibly from the Leader but your Following of the walk will be hidden from other members
+2. You will receive automated messages from the system and possibly from the Leader, and your Following of the walk will be visible to other members who are following that walk. Others will be able to see your “Display name” as chosen by you when registering, but none of the other information you provide
+1. Additionally, you will be able to send message to, and receive messages from, any other member with a privacy level of 1 who is Following the walk"
+                        required="true"
+			default="1"
+			/>
+                 <field
+			name="ra_min_miles"
+			type="textfield"
+			label="COM_RAMBLERS_PROFILE_CB_ACKNOWLEDGE_FOLLOW_LBL"
+			description="COM_RAMBLERS_PROFILE_CB_ACKNOWLEDGE_FOLLOW_DESC"
+			default="1"
+			/>
+                <field
+			name="ra_max_miles"
+			type="textfield"
+			label="COM_RAMBLERS_PROFILE_CB_ACKNOWLEDGE_FOLLOW_LBL"
+			description="COM_RAMBLERS_PROFILE_CB_ACKNOWLEDGE_FOLLOW_DESC"
+			default="1"
+			/>
+                <field  
+			name="ra_notify_joiners"
+			type="checkbox"
+			label="Notify joiners"
+			description="Whether or not you will be notified of new Followers (Leaders only)"
+			default="1"
+			/>   
+
+</form>
+
+

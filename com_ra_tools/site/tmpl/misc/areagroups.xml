@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 18/05/22 CB Created as area_groups
+     03/07/22 CB renamed 
+-->
+<metadata>
+    <layout title="Area Groups" option="View">
+		<message>
+			<![CDATA[Show all Groups in your Area]]>  <!-- CDATA introduces "character data" that will not be parsed as XML -->
+		</message>
+    </layout>
+    <config>
+	<fields name="params">
+            <fieldset name="basic"> 
+                <field name="note1" type="note" label="For information about this component please visit: https://docs.stokeandnewcastleramblers.org.uk and read the Webmasters Guide"/> 
+                <field name="note2" type="note" label="Specify the two character area code"/>
+                    <field name="area" type="text" default="NS" size="2" label="Area" description="Specify the two character area code" />
+                    <field name="page_intro" type="editor" default="" label="Introduction (optional)" description="Any introductory text for the page" /> 
+                    <field
+                        name="area_info"
+                        type="radio"
+                        label="Area introduction?"
+                        description="Whether to include Area introduction"
+                        class="inputbox"
+                        size="1"
+                        default="0"
+                        >
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </field>
+                    <field name="note3" type="note" label="Optionally, the page can include a link to display walks for each of the Groups:"/>
+                    <field name="programme" type="radio" default="1" label="Specify type of programme details">
+                        <option value="0">No programme</option>
+                        <option value="1">Simple list</option> 
+                        <option value="3">Calendar listing</option>                   
+                        <option value="2">Full list with six tabs</option>
+                </field>     
+            </fieldset>
+    	</fields>
+    </config>
+</metadata>

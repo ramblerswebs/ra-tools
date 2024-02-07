@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Display list of points on a map" option="View">
+		<message>
+			<![CDATA[Display list of points on a map]]> 
+		</message>
+	</layout>
+	<config>
+		<fields name="params">
+                    <fieldset name="basic">
+                        <!-- Define your basic params for the view here 
+                             They will appear as an "Options" tab when creating a front-end menu entry -->
+                        <field name="page_intro" 
+                               type="text" 
+                               default=""
+                               class="input-xxlarge" 
+                               label="Introduction (optional)" 
+                               description="Any introductory text for the page" 
+                        />                                                          
+                        <field name="parent_folder" 
+                            type="fixedfolderlist" 
+                            default="images/com_ra_tools" 
+                            label="Parent folder" 
+                            directory="" 
+                            description="Parent folder for storage of CSV files" 
+                            readonly="true" 
+                        />
+                        <field name="note1" 
+                               type="note" 
+                               label="The specified sub folder can itself be a subfolder (e.g. docs/committee)"
+                        />                            
+                        <field name="sub_folder" 
+                            type="text" 
+                            default="" 
+                            label="Sub folder" 
+                            description="Subordinate folder within the above parent" 
+                        />   
+                        <field name="file"
+                            type="text" 
+                            default=""
+                            label="File name" 
+                            description="Name of the file to be displayed. This must be formatted in line with instractions on https://www.ramblers-webs.org.uk/mapping-2/display-table-of-information.html" 
+                         />                                                                                                              
+                        <field name="show_file" type="radio" default="Y" label="Display name of folder/file">
+                            <option value="Y">Yes</option>                            
+                            <option value="N">No</option>      
+                        </field>  
+                        <field name="download" type="radio" default="Y" label="Allow file to be downloaded?">
+                            <option value="Y">Yes</option>                            
+                            <option value="N">No</option>      
+                        </field>  
+                        <field name="page_footer" 
+                           type="text" 
+                           default=""
+                           class="input-xxlarge" 
+                           label="Page footer (optional)" 
+                           description="Any required text for the foot of the page" 
+                        />                             
+                        <field name="note3" type="note" label="For information about this component please visit: https://docs.stokeandnewcastleramblers.org.uk and read the Webmasters Guide"/>
+                    </fieldset>
+		</fields>
+	</config>
+</metadata>
+
+

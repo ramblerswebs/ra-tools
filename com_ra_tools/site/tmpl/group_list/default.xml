@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Groups" option="View">
+		<message>
+			<![CDATA[List Ramblers Groups]]>
+		</message>
+	</layout>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+                            <!-- Define your basic params for the view here 
+                                 They will appear as an "Options" tab when creating a front-end menu entry -->                            
+			</fieldset>
+		</fields>
+	</config>
+</metadata>
